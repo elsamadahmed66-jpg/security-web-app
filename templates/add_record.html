@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <title>إضافة سجل</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <h2>إضافة سجل جديد</h2>
+  <form method="post">
+    <label>العنوان</label><br>
+    <input name="title" required><br>
+    <label>المحتوى</label><br>
+    <textarea name="content" rows="6" required></textarea><br><br>
+    <button type="submit">حفظ</button>
+  </form>
+  <p><a href="{{ url_for('dashboard') }}">الرجوع إلى لوحة التحكم</a></p>
+</body>
+</html>

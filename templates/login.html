@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <title>تسجيل الدخول</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <h2>تسجيل الدخول</h2>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul>
+        {% for category, msg in messages %}
+          <li class="{{ category }}">{{ msg }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+  <form method="post">
+    <label>اسم المستخدم</label><br>
+    <input name="username" required><br>
+    <label>كلمة المرور</label><br>
+    <input name="password" type="password" required><br><br>
+    <button type="submit">دخول</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# security-web-app/requirements.txt
+Flask>=2.0
+gunicorn
+Flask-SQLAlchemy
+python-dotenv
+werkzeug

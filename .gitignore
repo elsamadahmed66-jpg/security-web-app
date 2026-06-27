@@ -1,0 +1,9 @@
+# security-web-app/.gitignore
+credentials.json
+.env
+*.pyc
+__pycache__/
+instance/
+.vscode/
+.idea/
+data.db
