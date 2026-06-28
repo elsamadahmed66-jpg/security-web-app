@@ -29,7 +29,15 @@ class Record(db.Model):
 def init_db():
     db.create_all()
     print('Database initialized.')
+class Record(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(200), nullable=False)
+    content = db.Column(db.Text, nullable=False)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
+# أنشئ الجداول تلقائياً إذا لم تكن موجودة
+with app.app_context():
+    db.create_all()
 # بيانات تسجيل الدخول الثابتة
 def check_credentials(username, password):
     return username == "admin" and password == "123456"
